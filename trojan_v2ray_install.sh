@@ -697,8 +697,8 @@ function installBBR2(){
 
 
 function installWireguard(){
-    bash <(wget -qO- https://github.com/jinwyp/nihaowohao/raw/master/install_kernel.sh)
-    # wget -N --no-check-certificate https://github.com/jinwyp/nihaowohao/raw/master/install_kernel.sh && chmod +x ./install_kernel.sh && ./install_kernel.sh
+    bash <(wget -qO- https://github.com/nihaowohao/raw/master/install_kernel.sh)
+    # wget -N --no-check-certificate https://github.com/nihaowohao/raw/master/install_kernel.sh && chmod +x ./install_kernel.sh && ./install_kernel.sh
 }
 
 
@@ -1358,17 +1358,17 @@ EOF
     rm -rf ${configWebsitePath}/*
     mkdir -p ${configWebsiteDownloadPath}
 
-    downloadAndUnzip "https://github.com/jinwyp/nihaowohao/raw/master/download/website2.zip" "${configWebsitePath}" "website2.zip"
+    downloadAndUnzip "https://github.com/nihaowohao/raw/master/download/website2.zip" "${configWebsitePath}" "website2.zip"
 
-    wget -P "${configWebsiteDownloadPath}" "https://github.com/jinwyp/nihaowohao/raw/master/download/trojan-mac.zip"
-    wget -P "${configWebsiteDownloadPath}" "https://github.com/jinwyp/nihaowohao/raw/master/download/v2ray-windows.zip" 
-    wget -P "${configWebsiteDownloadPath}" "https://github.com/jinwyp/nihaowohao/raw/master/download/v2ray-mac.zip"
+    wget -P "${configWebsiteDownloadPath}" "https://github.com/nihaowohao/raw/master/download/trojan-mac.zip"
+    wget -P "${configWebsiteDownloadPath}" "https://github.com/nihaowohao/raw/master/download/v2ray-windows.zip" 
+    wget -P "${configWebsiteDownloadPath}" "https://github.com/nihaowohao/raw/master/download/v2ray-mac.zip"
 
-    # downloadAndUnzip "https://github.com/jinwyp/nihaowohao/raw/master/download/trojan_client_all.zip" "${configWebsiteDownloadPath}" "trojan_client_all.zip"
-    # downloadAndUnzip "https://github.com/jinwyp/nihaowohao/raw/master/download/trojan-qt5.zip" "${configWebsiteDownloadPath}" "trojan-qt5.zip"
-    # downloadAndUnzip "https://github.com/jinwyp/nihaowohao/raw/master/download/v2ray_client_all.zip" "${configWebsiteDownloadPath}" "v2ray_client_all.zip"
+    # downloadAndUnzip "https://github.com/nihaowohao/raw/master/download/trojan_client_all.zip" "${configWebsiteDownloadPath}" "trojan_client_all.zip"
+    # downloadAndUnzip "https://github.com/nihaowohao/raw/master/download/trojan-qt5.zip" "${configWebsiteDownloadPath}" "trojan-qt5.zip"
+    # downloadAndUnzip "https://github.com/nihaowohao/raw/master/download/v2ray_client_all.zip" "${configWebsiteDownloadPath}" "v2ray_client_all.zip"
 
-    #wget -P "${configWebsiteDownloadPath}" "https://github.com/jinwyp/nihaowohao/raw/master/download/v2ray-android.zip"
+    #wget -P "${configWebsiteDownloadPath}" "https://github.com/nihaowohao/raw/master/download/v2ray-android.zip"
 
     ${sudoCmd} systemctl start nginx.service
 
@@ -1852,7 +1852,7 @@ EOF
     rm -rf ${configTrojanBasePath}/trojan-win-cli-temp
     mkdir -p ${configTrojanBasePath}/trojan-win-cli-temp
 
-    downloadAndUnzip "https://github.com/jinwyp/nihaowohao/raw/master/download/trojan-win-cli.zip" "${configTrojanBasePath}" "trojan-win-cli.zip"
+    downloadAndUnzip "https://github.com/nihaowohao/raw/master/download/trojan-win-cli.zip" "${configTrojanBasePath}" "trojan-win-cli.zip"
 
     if [ "$isTrojanGo" = "no" ] ; then
         downloadAndUnzip "https://github.com/trojan-gfw/trojan/releases/download/v${versionTrojan}/trojan-${versionTrojan}-win.zip" "${configTrojanBasePath}/trojan-win-cli-temp" "trojan-${versionTrojan}-win.zip"
@@ -4769,7 +4769,7 @@ function start_menu(){
     green " ===================================================================================================="
     green " ===================================================================================================="
     green " ===================公开声明========================================================================="
-    green " Trojan Trojan-go V2ray Xray 一键安装脚本 | 2021-09-02 | By jinwyp | 系统支持：centos7+ / debian9+ / ubuntu16.04+"
+    green " Trojan Trojan-go V2ray Xray 一键安装脚本 | 2021-09-02 | By白嫖军 | 系统支持：centos7+ / debian9+ / ubuntu16.04+"
     red " *请不要在任何生产环境使用此脚本 请不要有其他程序占用80和443端口"
     green " ===================================================================================================="
     green " 1. 安装linux内核 bbr plus, 安装WireGuard, 用于解锁 Netflix 限制和避免弹出 Google reCAPTCHA 人机验证"
