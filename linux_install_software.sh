@@ -2041,6 +2041,8 @@ function start_menu(){
     green " 91. 工具脚本合集 by BlueSkyXN "
     green " 92. 工具脚本合集 by jcnf "
     green " 0. 退出脚本"
+    green " 0. 退出脚本"
+    green " 0. 退出脚本你大爷的"
     echo
     read -p "请输入数字:" menuNumberInput
     case "$menuNumberInput" in
