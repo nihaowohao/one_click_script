@@ -549,8 +549,8 @@ function installBBR2(){
 
 
 function installWireguard(){
-    bash <(wget -qO- https://github.com/jinwyp/nihaowohao/raw/master/install_kernel.sh)
-    # wget -N --no-check-certificate https://github.com/jinwyp/nihaowohao/raw/master/install_kernel.sh && chmod +x ./install_kernel.sh && ./install_kernel.sh
+    bash <(wget -qO- https://github.com/nihaowohao/raw/master/install_kernel.sh)
+    # wget -N --no-check-certificate https://github.com/nihaowohao/raw/master/install_kernel.sh && chmod +x ./install_kernel.sh && ./install_kernel.sh
 }
 
 
