@@ -697,8 +697,8 @@ function installBBR2(){
 
 
 function installWireguard(){
-    bash <(wget -qO- https://github.com/nihaowohao/raw/master/install_kernel.sh)
-    # wget -N --no-check-certificate https://github.com/nihaowohao/raw/master/install_kernel.sh && chmod +x ./install_kernel.sh && ./install_kernel.sh
+    bash <(wget -qO- https://github.com/nihaowohao/one_click_script/raw/master/install_kernel.sh)
+    # wget -N --no-check-certificate https://github.com/nihaowohao/one_click_script/raw/master/install_kernel.sh && chmod +x ./install_kernel.sh && ./install_kernel.sh
 }
 
 
@@ -1358,17 +1358,17 @@ EOF
     rm -rf ${configWebsitePath}/*
     mkdir -p ${configWebsiteDownloadPath}
 
-    downloadAndUnzip "https://github.com/nihaowohao/raw/master/download/website2.zip" "${configWebsitePath}" "website2.zip"
+    downloadAndUnzip "https://github.com/nihaowohao/one_click_script/raw/master/download/website2.zip" "${configWebsitePath}" "website2.zip"
 
-    wget -P "${configWebsiteDownloadPath}" "https://github.com/nihaowohao/raw/master/download/trojan-mac.zip"
-    wget -P "${configWebsiteDownloadPath}" "https://github.com/nihaowohao/raw/master/download/v2ray-windows.zip" 
-    wget -P "${configWebsiteDownloadPath}" "https://github.com/nihaowohao/raw/master/download/v2ray-mac.zip"
+    wget -P "${configWebsiteDownloadPath}" "https://github.com/nihaowohao/one_click_script/raw/master/download/trojan-mac.zip"
+    wget -P "${configWebsiteDownloadPath}" "https://github.com/nihaowohao/one_click_script/raw/master/download/v2ray-windows.zip" 
+    wget -P "${configWebsiteDownloadPath}" "https://github.com/nihaowohao/one_click_script/raw/master/download/v2ray-mac.zip"
 
-    # downloadAndUnzip "https://github.com/nihaowohao/raw/master/download/trojan_client_all.zip" "${configWebsiteDownloadPath}" "trojan_client_all.zip"
-    # downloadAndUnzip "https://github.com/nihaowohao/raw/master/download/trojan-qt5.zip" "${configWebsiteDownloadPath}" "trojan-qt5.zip"
-    # downloadAndUnzip "https://github.com/nihaowohao/raw/master/download/v2ray_client_all.zip" "${configWebsiteDownloadPath}" "v2ray_client_all.zip"
+    # downloadAndUnzip "https://github.com/nihaowohao/one_click_script/raw/master/download/trojan_client_all.zip" "${configWebsiteDownloadPath}" "trojan_client_all.zip"
+    # downloadAndUnzip "https://github.com/nihaowohao/one_click_script/raw/master/download/trojan-qt5.zip" "${configWebsiteDownloadPath}" "trojan-qt5.zip"
+    # downloadAndUnzip "https://github.com/nihaowohao/one_click_script/raw/master/download/v2ray_client_all.zip" "${configWebsiteDownloadPath}" "v2ray_client_all.zip"
 
-    #wget -P "${configWebsiteDownloadPath}" "https://github.com/nihaowohao/raw/master/download/v2ray-android.zip"
+    #wget -P "${configWebsiteDownloadPath}" "https://github.com/nihaowohao/one_click_script/raw/master/download/v2ray-android.zip"
 
     ${sudoCmd} systemctl start nginx.service
 
@@ -1852,7 +1852,7 @@ EOF
     rm -rf ${configTrojanBasePath}/trojan-win-cli-temp
     mkdir -p ${configTrojanBasePath}/trojan-win-cli-temp
 
-    downloadAndUnzip "https://github.com/nihaowohao/raw/master/download/trojan-win-cli.zip" "${configTrojanBasePath}" "trojan-win-cli.zip"
+    downloadAndUnzip "https://github.com/nihaowohao/one_click_script/raw/master/download/trojan-win-cli.zip" "${configTrojanBasePath}" "trojan-win-cli.zip"
 
     if [ "$isTrojanGo" = "no" ] ; then
         downloadAndUnzip "https://github.com/trojan-gfw/trojan/releases/download/v${versionTrojan}/trojan-${versionTrojan}-win.zip" "${configTrojanBasePath}/trojan-win-cli-temp" "trojan-${versionTrojan}-win.zip"
